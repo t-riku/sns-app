@@ -8,9 +8,11 @@ const Homes = () => {
   return (
     <>
       <Topbar />
-      <Sidebar />
-      <Timeline />
-      <Rightbar />
+      <div className="w-full grid grid-cols-12 items-center bg-gray-50">
+        <Sidebar />
+        <Timeline />
+        <Rightbar />
+      </div>
     </>
   );
 };
