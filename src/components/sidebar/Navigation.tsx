@@ -2,7 +2,7 @@ import React from "react";
 import { AiFillHome } from "react-icons/ai";
 import { AiOutlineSearch } from "react-icons/ai";
 import { IoIosNotifications } from "react-icons/io";
-import { BsChatLeftText } from "react-icons/bs";
+import { BiCommentDetail } from "react-icons/bi";
 import { BsFillBookmarkCheckFill } from "react-icons/bs";
 import { BsPersonFill } from "react-icons/bs";
 import { IoMdSettings } from "react-icons/io";
@@ -23,7 +23,7 @@ const Navigation = () => {
         <span className="text-xl pt-[2px]">通知</span>
       </li>
       <li className="flex items-center mb-[10px] p-[11px] cursor-pointer rounded-xl shadow-md hover:shadow-none hover:translate-y-[4px] transition-all duration-200">
-        <BsChatLeftText className="text-2xl mr-3" />
+        <BiCommentDetail className="text-2xl mr-3" />
         <span className="text-xl pt-[2px]">メッセージ</span>
       </li>
       <li className="flex items-center mb-[10px] p-[11px] cursor-pointer rounded-xl shadow-md hover:shadow-none hover:translate-y-[4px] transition-all duration-200">
