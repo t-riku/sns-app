@@ -8,6 +8,8 @@ const Timeline = () => {
       <div className="p-5">
         <Share />
         <Post />
+        <Post />
+        <Post />
       </div>
     </div>
   );
