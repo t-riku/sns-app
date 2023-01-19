@@ -8,7 +8,7 @@ type Layout = {
 // Layout.jsxは全てのコンポーネントをラップし共通のスタイルやレイアウトを適応させる
 const Layout = ({ children, title = "SNS app by Nextjs" }: Layout) => {
   return (
-    <div className="flex justify-center items-center flex-col min-h-screen text-white bg-gray-800 font-mono">
+    <div className="flex justify-center items-center flex-col min-h-screen text-white bg-gray-800 font-mono .box-border">
       <Head>{title}</Head>
 
       <main className="flex flex-1 justify-center items-center flex-col w-screen">
