@@ -8,7 +8,7 @@ const Follow = () => {
   return (
     <ul className="px-0 m-0">
       <li className="flex items-center mb-4">
-        <div className="relative aspect-square h-8 mr-3">
+        <div className="relative aspect-square h-11 mr-3">
           <Image
             className="object-cover w-8 h-8 cursor-pointer rounded-full"
             src={person01}
@@ -18,10 +18,10 @@ const Follow = () => {
             alt="friend image"
           />
         </div>
-        <span className="">t-riku</span>
+        <span className="text-lg">t-riku</span>
       </li>
       <li className="flex items-center mb-4">
-        <div className="relative aspect-square h-8 mr-3">
+        <div className="relative aspect-square h-11 mr-3">
           <Image
             className="object-cover w-8 h-8 cursor-pointer rounded-full"
             src={person02}
@@ -31,10 +31,10 @@ const Follow = () => {
             alt="friend image"
           />
         </div>
-        <span className="">tasuku</span>
+        <span className="text-lg">tasuku</span>
       </li>
       <li className="flex items-center mb-4">
-        <div className="relative aspect-square h-8 mr-3">
+        <div className="relative aspect-square h-11 mr-3">
           <Image
             className="object-cover w-8 h-8 cursor-pointer rounded-full"
             src={person03}
@@ -44,7 +44,7 @@ const Follow = () => {
             alt="friend image"
           />
         </div>
-        <span className="">gai</span>
+        <span className="text-lg">gai</span>
       </li>
     </ul>
   );
