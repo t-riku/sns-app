@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import me from "public/assets/person/1.jpeg";
+import me from "public/assets/person/me.jpg";
 import { BsChatLeftText } from "react-icons/bs";
 import { IoIosNotifications } from "react-icons/io";
 
@@ -22,7 +22,7 @@ const Notifications = () => {
         </div>
         <div className="relative aspect-square h-8">
           <Image
-            className="object-contain w-8 h-8 rounded-full cursor-pointer"
+            className="object-cover w-8 h-8 rounded-full cursor-pointer"
             src={me}
             fill
             priority={true}
