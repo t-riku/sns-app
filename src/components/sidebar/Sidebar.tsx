@@ -4,7 +4,7 @@ import React from "react";
 
 const Sidebar = () => {
   return (
-    <div className="col-span-2 h-screen">
+    <div className="col-span-3 h-screen">
       <div className="p-6">
         <Navigation />
 
