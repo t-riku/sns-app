@@ -1,4 +1,4 @@
-import Follow from "@/components/sidebar/Follow";
+import Follow from "@/components/sidebar/CloseFriend";
 import Navigation from "@/components/sidebar/Navigation";
 import React from "react";
 
