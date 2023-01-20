@@ -4,7 +4,7 @@ import React from "react";
 
 const Timeline = () => {
   return (
-    <div className="col-span-5 h-screen">
+    <div className="col-span-6 h-screen">
       <div className="p-5">
         <Share />
         <Post />
