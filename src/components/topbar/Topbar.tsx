@@ -5,13 +5,13 @@ import Notifications from "@/components/topbar/Notifications";
 
 const Topbar = () => {
   return (
-    <div className="bg-green-700 h-[50px] w-full grid grid-cols-12 items-center sticky top-0 z-50">
+    <header className="bg-green-700 h-[60px] w-full grid grid-cols-12 items-center sticky top-0 z-50">
       <Title />
 
       <Search />
 
       <Notifications />
-    </div>
+    </header>
   );
 };
 
