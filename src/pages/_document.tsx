@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <meta name="sns-app" content="MyApp" />
+        <meta name="SNS App" content="MyApp" />
       </Head>
       <body>
         <Main />
