@@ -1,8 +1,8 @@
 export const Users = [
   {
     id: 1,
-    profilePicture: "/assets/person/1.jpeg",
-    username: "ShinCode",
+    profilePicture: "/assets/person/taka.jpg",
+    username: "Taka",
   },
   {
     id: 2,
@@ -11,8 +11,8 @@ export const Users = [
   },
   {
     id: 3,
-    profilePicture: "/assets/person/3.jpeg",
-    username: "Koga",
+    profilePicture: "/assets/person/tomoya.jpg",
+    username: "Tomoya",
   },
   {
     id: 4,
@@ -23,6 +23,26 @@ export const Users = [
     id: 5,
     profilePicture: "/assets/person/5.jpeg",
     username: "Kikukawa",
+  },
+  {
+    id: 6,
+    profilePicture: "/assets/person/ryota.jpg",
+    username: "Ryota",
+  },
+  {
+    id: 7,
+    profilePicture: "/assets/person/toru.jpg",
+    username: "Toru",
+  },
+  {
+    id: 8,
+    profilePicture: "/assets/person/manytaka.jpg",
+    username: "10969",
+  },
+  {
+    id: 9,
+    profilePicture: "/assets/person/3.jpeg",
+    username: "sazae",
   },
 ];
 
