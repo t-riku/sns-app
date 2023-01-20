@@ -1,15 +1,19 @@
 import Image from "next/image";
-// import me from "public/assets/person/me.jpg";
-// import postImg from "public/assets/post/1.jpeg";
-import React from "react";
+import React, { useState } from "react";
 import { AiOutlineMore } from "react-icons/ai";
 import { BsFillHandThumbsUpFill } from "react-icons/bs";
+import { BsHandThumbsUp } from "react-icons/bs";
 import { BiComment } from "react-icons/bi";
 import { Users } from "src/Data/dummyData";
 
 const Post = ({ post }: any) => {
-  // const user = Users.filter((users) => users.id === 1);
+  const [like, setLike] = useState(post.like);
+  const [isLiked, SetIsLiked] = useState(false);
 
+  const handleLike = () => {
+    setLike(isLiked ? like - 1 : like + 1);
+    SetIsLiked(!isLiked);
+  };
   return (
     <section className="wーfull shadow-lg rounded-xl mx-0 my-7">
       <div className="p-7">
@@ -50,10 +54,22 @@ const Post = ({ post }: any) => {
         </div>
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center">
-            <BsFillHandThumbsUpFill className="mr-1 cursor-pointer text-blue-600" />
-            <span className="text-[15px]">
-              {post.like}人がいいねを押しました
-            </span>
+            {isLiked ? (
+              <BsFillHandThumbsUpFill
+                className="mr-1 cursor-pointer text-blue-600"
+                onClick={() => handleLike()}
+              />
+            ) : (
+              <BsHandThumbsUp
+                className="mr-1 cursor-pointer text-blue-600"
+                onClick={() => handleLike()}
+              />
+            )}
+            {/* <BsFillHandThumbsUpFill
+              className="mr-1 cursor-pointer text-blue-600"
+              onClick={() => handleLike()}
+            /> */}
+            <span className="text-[15px]">{like}</span>
           </div>
           <div className="flex items-center cursor-pointer border-b border-gray-400 mr-1 text-sm">
             <BiComment className="mr-1" />
