@@ -18,7 +18,7 @@ const Post = ({ post }: any) => {
     <section className="wーfull shadow-lg rounded-xl mx-0 my-7">
       <div className="p-7">
         <div className="flex items-center justify-between">
-          <div className="flex items-center">
+          <div className="flex items-center cursor-pointer">
             <div className="relative aspect-square h-12">
               <Image
                 className="object-cover w-8 h-8 rounded-full cursor-pointer"
@@ -27,7 +27,6 @@ const Post = ({ post }: any) => {
                     .profilePicture
                 }
                 fill
-                // placeholder="blur"
                 alt="Picture of the author"
               />
             </div>
@@ -36,7 +35,7 @@ const Post = ({ post }: any) => {
             </span>
             <span className="text-xs pt-1 pl-1">{post.date}</span>
           </div>
-          <div className="">
+          <div className="cursor-pointer">
             <AiOutlineMore />
           </div>
         </div>
@@ -47,28 +46,20 @@ const Post = ({ post }: any) => {
               className="object-contain w-8 h-8 cursor-pointer"
               src={post.photo}
               fill
-              // placeholder="blur"
               alt="Picture of the post"
             />
           </div>
         </div>
         <div className="flex items-center justify-between mb-2">
-          <div className="flex items-center">
+          <div
+            className="flex items-center cursor-pointer"
+            onClick={() => handleLike()}
+          >
             {isLiked ? (
-              <BsFillHandThumbsUpFill
-                className="mr-1 cursor-pointer text-blue-600"
-                onClick={() => handleLike()}
-              />
+              <BsFillHandThumbsUpFill className="mr-1 text-blue-600" />
             ) : (
-              <BsHandThumbsUp
-                className="mr-1 cursor-pointer text-blue-600"
-                onClick={() => handleLike()}
-              />
+              <BsHandThumbsUp className="mr-1 text-blue-600" />
             )}
-            {/* <BsFillHandThumbsUpFill
-              className="mr-1 cursor-pointer text-blue-600"
-              onClick={() => handleLike()}
-            /> */}
             <span className="text-[15px]">{like}</span>
           </div>
           <div className="flex items-center cursor-pointer border-b border-gray-400 mr-1 text-sm">

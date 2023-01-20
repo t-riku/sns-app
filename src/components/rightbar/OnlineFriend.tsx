@@ -9,15 +9,17 @@ const OnlineFriend = () => {
       <ul className="px-0 m-0">
         {Users.map((user: any) => {
           return (
-            <li className="flex items-center mb-4 gap-2" key={user.id}>
+            <li
+              className="flex items-center mb-4 gap-2 hover:bg-gray-200 cursor-pointer"
+              key={user.id}
+            >
               <div className="relative">
                 <div className="aspect-square h-11">
                   <Image
-                    className="object-cover w-8 h-8 cursor-pointer rounded-full"
+                    className="object-cover w-8 h-8 rounded-full"
                     src={user.profilePicture}
                     fill
                     priority={true}
-                    // placeholder="blur"
                     alt="friend image"
                   />
                 </div>
