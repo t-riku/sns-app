@@ -4,7 +4,7 @@ import PostType from "@/components/timeline/PostType";
 
 const Share = () => {
   return (
-    <div className="w-full h-[170px] shadow-md rounded-xl">
+    <section className="w-full h-[170px] shadow-md rounded-xl">
       <div className="p-3">
         <PostInput />
 
@@ -12,7 +12,7 @@ const Share = () => {
 
         <PostType />
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -4,14 +4,14 @@ import React from "react";
 
 const Timeline = () => {
   return (
-    <div className="col-span-6 h-screen">
+    <section className="col-span-6 h-screen">
       <div className="p-5">
         <Share />
         <Post />
         <Post />
         <Post />
       </div>
-    </div>
+    </section>
   );
 };
 

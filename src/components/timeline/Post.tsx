@@ -9,7 +9,7 @@ import { BiComment } from "react-icons/bi";
 
 const Post = () => {
   return (
-    <div className="wーfull shadow-lg rounded-xl mx-0 my-7">
+    <section className="wーfull shadow-lg rounded-xl mx-0 my-7">
       <div className="p-[10px]">
         <div className="flex items-center justify-between">
           <div className="flex items-center">
@@ -61,7 +61,7 @@ const Post = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
