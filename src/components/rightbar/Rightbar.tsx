@@ -20,9 +20,9 @@ const Rightbar = () => {
               <b>フォロワー限定</b>イベントを開催中！
             </span>
           </div>
-          <div className="relative aspect-square max-h-[300px] w-full mt-1 mb-8">
+          <div className="relative aspect-square max-h-[200px] w-5/6 mt-1 mb-8">
             <Image
-              className="object-cover w-8 h-8 cursor-pointer"
+              className="object-cover w-8 h-8 cursor-pointer rounded-xl"
               src={event}
               fill
               placeholder="blur"
