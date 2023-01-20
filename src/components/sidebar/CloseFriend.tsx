@@ -9,7 +9,7 @@ const Follow = () => {
       <ul className="px-0 m-0">
         {Users.map((user) => {
           return (
-            <li className="flex items-center mb-4 gap-2">
+            <li className="flex items-center mb-4 gap-2" key={user.id}>
               <div className="relative aspect-square h-11">
                 <Image
                   className="object-cover w-8 h-8 cursor-pointer rounded-full"

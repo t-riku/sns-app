@@ -9,7 +9,7 @@ const OnlineFriend = () => {
       <ul className="px-0 m-0">
         {Users.map((user: any) => {
           return (
-            <li className="flex items-center mb-4 gap-2">
+            <li className="flex items-center mb-4 gap-2" key={user.id}>
               <div className="relative">
                 <div className="aspect-square h-11">
                   <Image
