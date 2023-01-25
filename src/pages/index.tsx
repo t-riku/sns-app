@@ -2,6 +2,8 @@ import Head from "next/head";
 import type { NextPage } from "next";
 import Homes from "@/pages/home/Home";
 import Profile from "@/pages/profile/Profile";
+import Login from "@/pages/login/Login";
+import Register from "@/pages/register/Register";
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +16,8 @@ const Home: NextPage = () => {
       </Head>
       <Homes />
       {/* <Profile /> */}
+      {/* <Login /> */}
+      {/* <Register /> */}
     </div>
   );
 };

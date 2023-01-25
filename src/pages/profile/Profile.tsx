@@ -11,33 +11,29 @@ const Profile = () => {
   return (
     <>
       <Topbar />
-      <div className="w-full grid grid-cols-12 items-center bg-gray-50">
+      <div className="w-full grid grid-cols-12 bg-gray-50">
         <div className="col-span-3">
-          <div>
-            <Sidebar />
-          </div>
+          <Sidebar />
         </div>
         <div className="col-span-9">
-          <div className="">
-            <div className="relative w-full h-[250px]">
+          <div className="relative w-full h-[250px]">
+            <Image
+              className="object-cover w-8 h-8 cursor-pointer"
+              src={backgroundImg}
+              fill
+              priority={true}
+              alt="background image"
+            />
+          </div>
+          <div className="relative">
+            <div className="absolute left-0 right-0 aspect-square h-[150px] m-auto top-[-110px] border-2 border-white rounded-full">
               <Image
-                className="object-cover w-8 h-8 cursor-pointer"
-                src={backgroundImg}
+                className="object-cover w-8 h-8 cursor-pointer rounded-full"
+                src={me}
                 fill
                 priority={true}
-                alt="background image"
+                alt="my image"
               />
-            </div>
-            <div className="relative">
-              <div className="absolute left-0 right-0 aspect-square h-[150px] m-auto top-[-110px] border-2 border-white rounded-full">
-                <Image
-                  className="object-cover w-8 h-8 cursor-pointer rounded-full"
-                  src={me}
-                  fill
-                  priority={true}
-                  alt="my image"
-                />
-              </div>
             </div>
             <div className="flex flex-col items-center pt-[55px]">
               <h4 className="text-2xl font-semibold pb-1">t-riku</h4>
