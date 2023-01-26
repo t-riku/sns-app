@@ -1,14 +1,30 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineMore } from "react-icons/ai";
 import { BsFillHandThumbsUpFill } from "react-icons/bs";
 import { BsHandThumbsUp } from "react-icons/bs";
 import { BiComment } from "react-icons/bi";
-import { Users } from "src/Data/dummyData";
+// import { Users } from "src/Data/dummyData";
+import axios from "axios";
+import noAvatar from "public/assets/person/noAvatar.png";
+import { format } from "timeago.js";
 
 const Post = ({ post }: any) => {
-  const [like, setLike] = useState(post.like);
+  const [like, setLike] = useState(post.likes.length);
   const [isLiked, SetIsLiked] = useState(false);
+  // ユーザーの情報を格納
+  const [user, setUser] = useState<any>({});
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const response = await axios.get(
+        // `http://localhost:4000/api/users/${post.userId}`
+        `http://localhost:4000/api/users?userId=${post.userId}`
+      );
+      setUser(response.data);
+    };
+    fetchUser();
+  }, [post.userId]);
 
   const handleLike = () => {
     setLike(isLiked ? like - 1 : like + 1);
@@ -22,18 +38,15 @@ const Post = ({ post }: any) => {
             <div className="relative aspect-square h-12">
               <Image
                 className="object-cover w-8 h-8 rounded-full cursor-pointer"
-                src={
-                  Users.filter((users) => users.id === post.id)[0]
-                    .profilePicture
-                }
+                src={user.profilePicture || noAvatar}
                 fill
                 alt="Picture of the author"
               />
             </div>
             <span className="text-xl font-semibold mx-[10px]">
-              {Users.filter((users) => users.id === post.id)[0].username}
+              {user.username}
             </span>
-            <span className="text-xs pt-1 pl-1">{post.date}</span>
+            <span className="text-xs pt-1 pl-1">{format(post.createdAt)}</span>
           </div>
           <div className="cursor-pointer">
             <AiOutlineMore />
@@ -44,7 +57,7 @@ const Post = ({ post }: any) => {
           <div className="relative aspect-square mt-5 max-h-[400px] w-full">
             <Image
               className="object-contain w-8 h-8 cursor-pointer"
-              src={post.photo}
+              src={post.img}
               fill
               alt="Picture of the post"
             />
