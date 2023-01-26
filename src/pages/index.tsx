@@ -1,11 +1,15 @@
 import Head from "next/head";
 import type { NextPage } from "next";
-import Homes from "@/pages/home/Home";
-import Profile from "@/pages/profile/Profile";
-import Login from "@/pages/login/Login";
-import Register from "@/pages/register/Register";
+import Profile from "@/pages/Profile";
+import Login from "@/pages/Login";
+import Register from "@/pages/Register";
+import Homes from "@/pages/Home";
+import { useContext } from "react";
+import { AuthContext } from "@/context/AuthContext";
+// import { AuthContextProvider } from "@/context/AuthContext";
 
 const Home: NextPage = () => {
+  const { user } = useContext(AuthContext);
   return (
     <div>
       <Head>
@@ -14,8 +18,11 @@ const Home: NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Homes />
+      {/* <AuthContextProvider>
+      </AuthContextProvider> */}
+      {/* <Homes /> */}
       {/* <Profile /> */}
+      {user ? <Homes /> : <Login />}
       {/* <Login /> */}
       {/* <Register /> */}
     </div>
