@@ -12,7 +12,7 @@ const Navigation = () => {
   return (
     <section>
       <ul className="m-0 p-0">
-        <Link href="/home/Home">
+        <Link href="/Home">
           <li className="flex items-center mb-[10px] p-[11px] cursor-pointer rounded-xl shadow-md hover:shadow-none hover:translate-y-[4px] transition-all duration-200">
             <AiFillHome className="text-2xl mr-3" />
             <span className="text-lg pt-[2px]">ホーム</span>
@@ -34,7 +34,14 @@ const Navigation = () => {
           <BsFillBookmarkCheckFill className="text-2xl mr-3" />
           <span className="text-lg pt-[2px]">ブックマーク</span>
         </li>
-        <Link href="/profile/Profile/">
+        <Link
+          href={{
+            pathname: "/Profile",
+            // pathname: "/Profile/:username",
+            // query: { username: "t-riku" },
+          }}
+          as="/Profile/[username]"
+        >
           <li className="flex items-center mb-[10px] p-[11px] cursor-pointer rounded-xl shadow-md hover:shadow-none hover:translate-y-[4px] transition-all duration-200">
             <BsPersonFill className="text-2xl mr-3" />
             <span className="text-lg pt-[2px]">プロフィール</span>
