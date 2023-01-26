@@ -4,7 +4,7 @@ import OnlineFriend from "@/components/rightbar/OnlineFriend";
 import Promotion from "@/components/rightbar/Promotion";
 import UserInfo from "@/components/rightbar/UserInfo";
 
-const Rightbar = ({ profile }: any) => {
+const Rightbar = ({ user }: any) => {
   const HomeRightBar = () => {
     return (
       <>
@@ -32,7 +32,7 @@ const Rightbar = ({ profile }: any) => {
   return (
     <div className="col-span-3 h-screen">
       <div className="pt-5 pr-5 pl-5">
-        {profile ? <ProfileRightBar /> : <HomeRightBar />}
+        {user ? <ProfileRightBar /> : <HomeRightBar />}
       </div>
     </div>
   );
